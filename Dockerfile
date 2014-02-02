@@ -14,9 +14,9 @@ RUN export LANGUAGE=en_US.UTF-8; export LANG=en_US.UTF-8; export LC_ALL=en_US.UT
 # Install base system
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y wget curl memcached
 
-EXPOSE 11211
 USER daemon
 
+EXPOSE 11211
+
 ADD start.sh /start.sh
-RUN chmod 0755 /start.sh
 CMD ["bash", "start.sh"]

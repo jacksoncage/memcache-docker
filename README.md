@@ -24,7 +24,7 @@ The container has all pre requisites set up to run memcache server.
 #### Start the container and keep control
 The command above starts the container in deamon mode (-d) and runs in the background. If you want to start it by yourself just to see what happens use this command:
 
-	$ sudo docker run -i -t -p 11211 -v jacksoncage/memcache bash
+	$ sudo docker run -i -t -p 11211 jacksoncage/memcache bash
 
 Notice the two changes made here, first we replaced the deamon switch (-d) with the tty switch (-t) which pipes the std in and std out to your terminal.
 
@@ -42,5 +42,5 @@ Now go to `<your container's ip>:<container's port>` in your browser
 ### Stop the container
 Stopping a running container is possible via the docker api. If only one instance of this container is running this command will stop it:
 
-	sudo docker stop `sudo docker ps |grep jacksoncage/memcache |cut -d\  -f1`
+	$ sudo docker stop `sudo docker ps |grep jacksoncage/memcache |cut -d\  -f1`
 
