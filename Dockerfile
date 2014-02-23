@@ -1,8 +1,5 @@
-FROM        ubuntu
+FROM        debian
 MAINTAINER  Love Nyberg "love.nyberg@lovemusic.se"
-
-# Update apt sources
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 
 # Update the package repository
 RUN apt-get update; apt-get upgrade -y; apt-get install locales
